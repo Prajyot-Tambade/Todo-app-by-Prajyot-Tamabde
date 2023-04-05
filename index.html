@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="banner">
+            
+        </div>
+        <div class="container">
+            <div class="toDoApp">
+
+                <!-- Input Section -->
+                <div class="header">
+                    <div class="sec">
+
+                        <h2 class="secondary-header">Input Section</h2>
+                        <div class="input-row">
+                            <input type="text" id="taskInput" placeholder="New Task">
+                            <button onclick="addElement()" id="btn"><i class="fa-solid fa-plus"></i> Add</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Task Section -->
+                <div class="task-sec">
+                    <h2 class="secondary-header">Tasks</h2>
+                    <div class="tasks">
+                        <ul id="taskContainer">
+                            <!-- <li class="task checked">Task1<span class="cross"></span></li>
+                            <li class="task">Task2<span class="cross"></span></li>
+                            <li class="task">Task3<span class="cross"></span></li> -->
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    <!-- TODO: Add link to the repository of this project in the github icon -->
+    <!-- WATERMARK -->
+    <div class="waterMark">
+        <p>Made by</p>
+        <a href="https://github.com/Prajyot-Tambade" class="name" target="_blank">Prajyot Tambade </a> <a href=""><i
+                class="fa-brands fa-github"></i></a>
+    </div>
+
+    <!-- Font Awesome icons script -->
+    <script src="https://kit.fontawesome.com/5f14f89bbf.js" crossorigin="anonymous"></script>
+    <!-- Main javaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

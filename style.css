@@ -1,0 +1,236 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+/* Basic CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #e3e9ff;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Variables */
+:root {
+    --backgroud: #e3e9ff;
+    --btn-bg: #af7eeb;
+    --text-color: #99a1be;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Background */
+
+.banner {
+    width: 100%;
+    /* height: 100%; */
+    min-height: 50vh;
+    /* padding: 70px; */
+    background-image: url(https://images.unsplash.com/photo-1644329843283-640d00509d43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-size: cover;
+    background-position: center 50%;
+}
+
+.banner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--backgroud);
+}
+
+/* Main App */
+
+/* Input Section */
+.toDoApp {
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.sec {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px 30px 10px;
+    border-radius: 25px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 15px;
+    padding-left: 20px;
+    margin-block: 20px;
+}
+
+.input-row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.input-row button {
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    background: var(--btn-bg);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.input-row button:active {
+    background-color: #794eaf;
+}
+
+/* Task Section */
+
+.task-sec h2 {
+    margin: 40px 28px 0px;
+}
+
+.task,
+.checked {
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 20px 20px 20px 50px;
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.task::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 19px;
+    height: 19px;
+    background-image: url(./assests/unchecked.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.cross {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/009/344/496/small/x-transparent-free-png.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.cross:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.checked {
+    text-decoration: line-through;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.checked::before {
+    background-image: url(./assests/checked.png);
+}
+
+/* Main CSS for WATERMARK */
+.waterMark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.waterMark a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.waterMark a:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media quries for App */
+@media (max-width: 480px) {
+    .banner {
+        min-height: 20vh;
+        background-position: center 75%;
+        transform: scale(1.2);
+    }
+
+    .toDoApp {
+        max-width: 300px;
+    }
+
+    .sec {
+        padding: 20px 20px 5px;
+        border-radius: 13px;
+    }
+
+    .secondary-header {
+        font-size: 1.2rem;
+    }
+
+    .input-row {
+        padding-left: 10px;
+        margin-block: 10px;
+        border-radius: 8px;
+    }
+
+    .input-row input {
+        padding: 5px;
+    }
+
+    .input-row button {
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .task-sec h2 {
+        margin: 20px 18px 0;
+    }
+
+    .waterMark {
+        font-size: 0.7rem;
+    }
+}
+
+/* Media quries for WATERMARK */
+@media (max-width: 480px) {
+    .waterMark {
+        font-size: 0.7rem;
+    }
+}
